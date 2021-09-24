@@ -10,7 +10,7 @@ programa
 		
 		horas = (totalSegundos/3600)
 		minutos = ((totalSegundos - (horas*3600))/60)
-		segundos = (totalSegundos % 60)
+		segundos = (totalSegundos%60)
 
 		escreva(" O tempo de duração do evento da fábrica é de " , horas , " horas " , minutos , " minutos " , segundos , " segundos ") 
 	}

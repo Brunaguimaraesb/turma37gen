@@ -1,21 +1,26 @@
 programa
 {
-	
+/*Programa que mostra uma contagem na tela de 233 a 456, 
+*só que contando de 3 em 3 quando estiver entre 300 e 400 
+*e de 5 em 5 quando não estiver.
+*/
+ 
 	funcao inicio()
 	{
-		cadeia nome
-		inteiro anos, meses, dias, totalDias
+		inteiro inicio=0, final=0
 
-		escreva("Digite seu nome: ")
-		leia(nome)
-		escreva("Digite quantos dias de vida você possui: ")
-		leia(totalDias)
+		inicio = 233
+		final=456
 
-		anos = (totalDias/365)
-		meses = ((totalDias%365)/30)
-		dias = ((totalDias%365)/30)
-
-		escreva("Oi" +nome+ " sua idade é " , anos, " anos, " , meses, " meses e " , dias , " dias")
+		faca{
+			escreva("\n",inicio)
+			se (inicio>=300 e inicio <=400){
+				inicio=inicio + 3
+			}
+			senao {
+				inicio = inicio + 5
+			}
+		}enquanto(inicio <=final)
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -23,7 +28,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 380; 
+ * @POSICAO-CURSOR = 352; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

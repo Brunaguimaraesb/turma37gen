@@ -16,7 +16,7 @@ public class Lista1Questao1 {
 		anos= leia.nextInt();
 		System.out.println("Digite o complemento da sua idade em meses: " );
 		meses=leia.nextInt();
-		System.out.println("Digite o comple,ento da sua idade em dias:" );
+		System.out.println("Digite o complemento da sua idade em dias:" );
 		dias=leia.nextInt();
 		
 		totalDias = (anos*365)+(meses*30)+dias;

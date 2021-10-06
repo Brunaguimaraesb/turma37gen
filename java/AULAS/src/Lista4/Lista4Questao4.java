@@ -23,9 +23,13 @@ public class Lista4Questao4 {
 				System.out.println("Digite o valor da matriz: ");
 				matriz[linha][coluna]=leia.nextInt();
 				somaTotal = somaTotal +matriz[linha][coluna];
-				if(linha==coluna)
+				if(linha==coluna) {
 					somaDiagonal=somaDiagonal + matriz[linha][coluna];
+				}	
 			}
 		}
+		System.out.println(" A soma dos números da matriz é: " +somaTotal);
+		System.out.println(" A soma dos números da diagonal é: " +somaDiagonal);
 	}
 }
+

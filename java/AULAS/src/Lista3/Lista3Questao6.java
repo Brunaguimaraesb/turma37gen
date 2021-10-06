@@ -14,7 +14,7 @@ public class Lista3Questao6 {
 		do {
 			System.out.printf("Digite um número inteiro: ");
 			numero = leia.nextInt();
-			if (numero%3 ==0) {
+			if (numero%3 ==0 && numero>0) {
 				somaTotal=somaTotal+numero;
 				qtdeMultiplos++;
 			}

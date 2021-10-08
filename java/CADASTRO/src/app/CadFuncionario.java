@@ -3,6 +3,7 @@ package app;
 import java.util.Scanner;
 
 import entities.Clientes;
+import entities.Funcionario;
 
 public class CadFuncionario {
 
@@ -10,29 +11,19 @@ public class CadFuncionario {
 
 			Scanner leia = new Scanner (System.in);
 			
-			Funcionario func1 = new Funcionario ();
+			Funcionario func = new Funcionario ();
 			
-			System.out.println("Digite o nome do cliente: ");
-			func1.nome = leia.next();
-			System.out.println("Digite o ano de nascimento: ");
-			func1.anosNascimento = leia.nextInt();
+			func.setNome("JOÃO");
+			func.setSalario(4000.00);
+			func.setIdade(30);
+			func.setGenero("MASCULINO");
 			
-			System.out.println("Digite 1-masculino, 2- feminino, 3 neutre: ");
-			char op = leia.next().charAt(0);
-			
-			if ( op == '1') {
-				func1.genero = "MASCULINO";
-			}
-			else if (op == '2') {
-				func1.genero = "FEMININO";
-							
-			}
-			else if (op == '3') {
-				func1.genero ="NEUTRE";
-				
-			}
-			
-			
+			System.out.println(func.getNome());
+			System.out.println(func.getSalario());
+			System.out.println(func.getIdade());
+			System.out.println(func.getGenero());
+
+			System.out.println(func.toString());
 	}
 
 }

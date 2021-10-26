@@ -1,41 +1,30 @@
 package Entities;
 
-import java.util.Scanner;
-
 public class ContaCorrente extends Conta {
-    Scanner entrada = new Scanner(System.in);
-    private int contadorTalao = 3;
+	protected double saldoCorrigido;
 
-   
-
-    public ContaCorrente(int numero, String cpf,  int contadorTalao) {
+	public ContaCorrente(int numero, String cpf, double saldoCorrigido) {
 		super(numero, cpf);
-		this.contadorTalao = contadorTalao;
+		this.saldoCorrigido = saldoCorrigido;
 	}
 
+	public double getSaldoCorrigido() {
+		return saldoCorrigido;
+	}
 
+	public void setSaldoCorrigido(double saldoCorrigido) {
+		this.saldoCorrigido = saldoCorrigido;
+	}
+	
+	public void talao(int contadorTalao) {
+		if (contadorTalao >= 1 && contadorTalao <= 3) {
+			double saldoCorrigido = super.getSaldo() + (contadorTalao * 30);
+			System.out.println(saldoCorrigido);
+		}
 
-	public void pediTalao(int contadorTalao, double saldo) {
-        int resposta = 0;
-        int numcheque = 0;
-        System.out.println("Deseja solicitar cheque 1- sim / 2- não?");
-        resposta = entrada.nextInt();
-        if (resposta == 1) {
-            System.out.println("Disponibilizamos um limite de três cheques. Quantos você deseja? ");
-            numcheque = entrada.nextInt();
-        if (numcheque > contadorTalao) {
-                System.out.println("Valor invalido");
-            }
-
-        }
-        if (resposta == 2) {
-            System.out.println("Obrigado por usar o banco ladrão");
-
-        }
-
-        this.getSaldo(saldo - numcheque * 30);
-        contadorTalao = contadorTalao - numcheque;
-        System.out.println("Você ainda tem " +numcheque+" cheques disponiveis. ");
-    }
+		else {
+			System.out.println("Valor incorreto!");
+		}
+	}
 
 }

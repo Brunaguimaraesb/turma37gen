@@ -4,7 +4,7 @@ public abstract class Conta {
 
 	private int numero;
 	private String cpf;
-	private double saldo;
+	protected double saldo;
 	private boolean ativo;
 
 	public Conta(int numero, String cpf) {
@@ -55,9 +55,10 @@ public abstract class Conta {
 		if (valor <= 0) {
 			System.out.println("Impossível realizar a transação");
 		}
-		if (valor > this.saldo) {
+		else if (valor > this.saldo) {
 			System.out.println("Saldo indisponivel...");
-		} else if (this.saldo>=valor) {
+		} 
+		else if (this.saldo>=valor) {
 			this.saldo = this.saldo - valor;
 			
 		}
